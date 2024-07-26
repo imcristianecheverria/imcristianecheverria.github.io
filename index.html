@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            justify-content: space-between;
+            padding: 1vh 1vh;
+        }
+        body header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0px 1px;
+        }
+        .icon-frases, .icon-spotify {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0%;
+        }
+        .icon-frases {
+            background-image: url('resource/escribiendo.png');
+        }
+        .icon-spotify {
+            background-image: url('resource/Spotify_Primary_Logo_RGB_Black.png');
+        }
+        label.frase {
+            color: #191919;
+            text-align: center;
+            font-size: 18px;
+        }
+        .image-container {
+            width: 100%;
+            height: 80%;
+            margin-top: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container img {
+            width: 90%;
+        }
+        .background-image {
+            position: fixed;
+            z-index: -1;
+        }
+        .image1 {
+            top: -10%;
+            left: -10%;
+            width: 60%;
+            max-width: 600px;
+        }
+        .image2 {
+            bottom: -10%;
+            right: -10%;
+            width: 70%;
+            max-width: 700px;
+        }
+        .spotify-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="./resource/forma1.png" class="background-image image1">
+    <img src="./resource/path19.png" class="background-image image2">
+    <header>
+        <a href="" class="icon-frases"></a>
+        <label class="frase">WITH YOU, <br> EVERYTHING IS BETTER</label>
+        <a href="" class="icon-spotify"></a>
+    </header>
+    <div class="image-container">
+        <img id="randomImage" src="./resource/1.png" alt="">
+    </div>
+    <div class="spotify-container">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0jzyguGLNxWabtbAH0IbeE?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <script>
+        // Lista de imágenes
+        const images = [
+            'resource/1.png',
+            'resource/2.png',
+            'resource/3.png'
+        ];
+
+        // Selecciona un índice aleatorio
+        const randomIndex = Math.floor(Math.random() * images.length);
+
+        // Actualiza el src de la imagen
+        document.getElementById('randomImage').src = images[randomIndex];
+    </script>
+</body>
+</html>
